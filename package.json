@@ -1,0 +1,17 @@
+{
+  "name": "p6",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "sass": "^1.43.4"
+  },
+  "devDependencies": {
+    "run-script-os": "^1.1.6"
+  }
+}
