@@ -24,7 +24,7 @@ app.use((req, res, next) => {
 
 app.use(bodyParser.json());
 
-app.use('api/sauces', saucesRoutes);
+app.use('/api/sauces', saucesRoutes);
 app.use('/api/auth', usersRoutes);
 
 
