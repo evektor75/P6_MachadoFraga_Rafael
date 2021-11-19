@@ -5,8 +5,11 @@ const path = require('path');
 const saucesRoutes = require('./routes/sauces');
 const usersRoutes = require('./routes/user');
 
-mongoose.connect('mongodb+srv://Evektor75:Rafaelfraga75@cluster0.owr7g.mongodb.net/myFirstDatabase?retryWrites=true&w=majority',
+require('dotenv').config();
+
+mongoose.connect(`mongodb+srv://${process.env.DB_URI}`,
     {
+        useCreateIndex: true,
         useNewUrlParser: true,
         useUnifiedTopology: true
     })
@@ -24,7 +27,7 @@ app.use((req, res, next) => {
 
 app.use(express.json());
 app.use(express.urlencoded({
-  extended: true
+    extended: true
 }));
 app.use('/images', express.static(path.join(__dirname, 'images')));
 app.use('/api/sauces', saucesRoutes);
