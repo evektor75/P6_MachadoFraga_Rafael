@@ -5,6 +5,7 @@ const saucesCtrl = require('../controllers/sauces'); //import fonctions ajout,su
 const auth = require('../middleware/auth');//import middleware authentification
 const multer = require('../middleware/multer-config'); //import middleware multer
 
+
 router.post('/', auth, multer, saucesCtrl.createSauce);
 router.post('/:id/like', auth, saucesCtrl.likeAndDislike);
 router.put('/:id', auth, multer, saucesCtrl.modifySauce);
